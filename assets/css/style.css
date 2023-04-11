@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font: 700 16px sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.container{
+    max-width: 1200px;
+    width: 800px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 30% 35% 30%;
+    justify-content: space-between;
+    gap: 10px;
+    height: 400px;
+}
+
+.container h2{
+    text-align: center;
+    color: #eee;
+    margin-top: 20px;
+}
+
+.container .play {
+    background-color: #444;
+}
+
+.modal{
+    position: absolute;
+    top: 50px;
+    background-color: #bb3d3d;
+    color: #edd;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: 0.3s ease-out;
+    opacity: 0;
+}
+
+.modal p{
+    font-size: 0.9em;
+}
+
+
+
+@media screen and (max-width:750px){
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 400px;
+        height: auto;
+    }
+    .container > div {
+        width: 100%;
+    }
+    .modal{
+        position: fixed;
+        top: 50%;
+    }
+}
+
+
+/* Bet */
+
+.getBet{
+    padding: 10px;
+}
+
+.balls{
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 9px;
+    padding: 5px;
+}
+
+.single-ball{
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    height: 28px;
+    width: 28px;
+}
+
+.getBet input#name{
+    height: 30px;
+    border-radius: 5px;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 0.9em;
+}
+
+.getBet label{
+    margin: 10px 0;
+    display: block;
+    color: #eee;
+}
+
+.getBet .btn-bet{
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.getBet h3{
+    font-size: 0.9em;
+    text-align: center;
+    color: #eee;
+    margin: 10px 0;
+    margin-top: 20px;
+}
+
+.container-betRandom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.getBet #numberOfBets{
+    height: 30px;
+    width: 65%;
+    font-size: 1em;
+    padding: 10px;
+    color: #555;
+    border-radius: 5px;
+}
+
+.getBet #numberOfBets::placeholder{
+    font-size: 0.7em;
+}
+
+.getBet .btn-random-bet{
+    height: 30px;
+    width: 30%;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn , .single-ball{
+    transition: 0.3s transform;
+}
+
+.btn:hover , .single-ball:hover{
+    transform: scale(1.07);
+}
+
+@media screen and (max-width:720px) {
+    .balls{
+        width: 280px;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .balls .single-ball{  
+        height: 40px;
+        width: 40px;
+    }
+}
+
+
+
+/* Play */
+
+.play{
+    padding: 10px;
+}
+
+.play h1{
+    text-align: center;
+    color: #eee;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.play .circle{
+    height: 130px;
+    width: 100%;
+    margin: 10px auto 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.play .circle p.nameWinner{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.play .circle h3{
+    color: #393;
+    font-size: 1.5em;
+}
+
+
+.play .circle .pointsWinner{
+    color: #933;
+    font-size: 1.5em;
+}
+
+.play button{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 1.6em;
+}
+
+.ballsWinner{
+    display: flex;
+    gap: 10px;
+    margin: 20px auto 0;
+    text-align: center;
+    width: 210px;
+}
+
+.ballsWinner span{
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+    line-height: 30px;
+}
+
+
+
+
+
+/* AllBets */
+
+.allBets{
+    padding: 10px;
+}
+
+.list{
+    
+    overflow-y: auto;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.single-bet{
+    padding: 5px;
+    margin: 5px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.card-bet{
+    height: 25px;
+    border-radius: 5px;
+    margin: 2px 0;
+    display: flex;
+    align-items: center;
+}
+
+.card-bet span{
+    border-radius: 50%;
+    background-color: #333;
+    color: #eee;
+    width: 23px;
+    height: 23px;
+    display: block;
+    text-align: center;
+    margin-right: 5px;
+    font-size: 0.8em;
+    padding: 3px;
+    line-height: 20px;
+}
+
+.single-bet p{
+    font-size: 0.8em;
+}
+
+
+.single-ball.mark{
+    background-color: #393;
+    color: #eee;
+}
+
+

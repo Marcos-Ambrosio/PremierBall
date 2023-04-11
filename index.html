@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loto2022</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Apostar -->
+        <div class="getBet">
+            <h2>Faça sua aposta</h2>
+            <div class="balls"></div>
+            <form action="">
+                <label for="name">Nome</label>
+                    <input type="text" id="name" placeholder="Seu nome">
+                <button type="submit" class="btn btn-bet">Apostar</button>
+            </form>
+            <hr>
+
+            <!-- Gerar apostas aleatorias -->
+            <h3>Gerar apostas aleatórias</h3>
+            <form action="">
+                <div class="container-betRandom">
+                    <input type="number" id="numberOfBets" min="1" value="" max="99" placeholder="Número de apostas que serão geradas">
+                    <button class="btn btn-random-bet">Gerar</button>
+                </div>
+            </form>
+            
+        </div>
+
+        <!-- Sortear -->
+        <div class="play">
+            <h1>PremierShip</h1>
+            <div class="circle">
+                <h3>Vencedor</h3>
+                <p class="nameWinner"></p>
+                <p class="idWinner"></p>
+                <p class="pointsWinner"></p>
+            </div>
+            <div class="button">
+                <button class="btn btn-sort">Sortear</button>
+            </div>
+            <div class="ballsWinner">
+            </div>
+
+        </div>
+
+        <!-- Lista de apostas feitas -->
+        <div class="allBets">
+            <h2>Lista de apostas feitas <span class="numberOfBet">[ 0 ]</span></h2>
+            <div class="list">
+                
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal">
+        <p class="msg"></p>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
